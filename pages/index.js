@@ -26,6 +26,18 @@ function HomePage(props) {
 
 // This code execute during the build process. If you would want to load data from a backend 
 // before your component render it.
+
+// export async function getServerSideProps(context) {
+//     // This is useful when you need access to the request object and your data changes so frequently that revalidate won't help
+//     const req = context.req;
+//     const res = context.res;
+//     return {
+//         props: {
+//             meetups: DUMMY_MEETUPS
+//         }
+//     };
+// }
+
 export function getStaticProps() {
     // fetch data from an API or read data from a file system. This is important during the build process.
     return {
