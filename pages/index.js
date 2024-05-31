@@ -1,4 +1,5 @@
 import MeetupList from "@/components/meetups/MeetupList";
+// import { getStaticProps } from "next/dist/build/templates/pages";
 
 const DUMMY_MEETUPS = [
     {
@@ -17,10 +18,21 @@ const DUMMY_MEETUPS = [
     },
 ];
 
-function HomePage() {
+function HomePage(props) {
     return (
-      <MeetupList meetups={DUMMY_MEETUPS} />
+      <MeetupList meetups={props.meetups} />
     )
+}
+
+// This code execute during the build process. If you would want to load data from a backend 
+// before your component render it.
+export function getStaticProps() {
+    // fetch data from an API or read data from a file system. This is important during the build process.
+    return {
+        props: {
+            meetups: DUMMY_MEETUPS
+        }
+    };
 }
 
 export default HomePage;
