@@ -41,7 +41,7 @@ export async function getStaticProps(context) {    /* In this case context does 
     const meetupsConnection = db.collection('meetups');
 
     const singleMeetup = await meetupsConnection.findOne({ 
-        _id: ObjectId(meetupId)
+        _id: new ObjectId(meetupId)
     })
 
     client.close();
@@ -49,7 +49,7 @@ export async function getStaticProps(context) {    /* In this case context does 
     return {
         props: {
             meetupData: {
-                id: singleMeetup._id,
+                id: singleMeetup._id.toString(),
                 title: singleMeetup.title,
                 address: singleMeetup.address,
                 image: singleMeetup.image,
