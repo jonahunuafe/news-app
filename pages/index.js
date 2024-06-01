@@ -33,9 +33,11 @@ function HomePage(props) {
 //     };
 // }
 
+const uri = process.env.MONGODB_URI;
+
 export async function getStaticProps() {
     // fetch data from an API or read data from a file system. This is important during the build process.
-    const client = await MongoClient.connect('mongodb+srv://Jonah:B9DhfJLBmFAMjb8J@jonahdev.5dyhnme.mongodb.net/?retryWrites=true&w=majority&appName=Jonahdev');
+    const client = await MongoClient.connect(uri);
     const db = client.db();
 
     const meetupsConnection = db.collection('meetups');
