@@ -1,3 +1,4 @@
+import RemoveBtn from '../ui/RemoveBtn';
 import MeetupItem from './MeetupItem';
 import classes from './MeetupList.module.css';
 import Link from 'next/link';
@@ -16,10 +17,10 @@ function MeetupList(props) {
               title={meetup.title}
               address={meetup.address}
             />
-            <div>
-              <p>delete</p>
-              <Link href={'/meetup/123'}>
-                <HiPencilAlt />
+            <div style={{display: 'flex', gap: '30px', width: '100%'}}>
+              <RemoveBtn />
+              <Link href={'/editmeetup/123'}>
+                <HiPencilAlt size={24} />
               </Link>
             </div>
           </>
