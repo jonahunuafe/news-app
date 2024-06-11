@@ -1,9 +1,16 @@
 import React from 'react'
+import { useState, useEffect } from "react";
 
 function Nav() {
-  return (
-    <div>Nav</div>
-  )
+    const [] = useState()
+
+    useEffect(() => {
+        
+    }, [])
+
+    return (
+        <div>Nav</div>
+    )
 }
 
 export default Nav
