@@ -1,12 +1,14 @@
 'use client'
 import React from 'react'
 import Input from './Input'
+import { addContact } from '@/lib/action'
 
 
 const CreateForm = () => {
     return (
         <div>
             <form
+            action={addContact}
             className='bg-gray-100 items-center p-2  rounded'
             >
             <div className='flex mb-4'>
