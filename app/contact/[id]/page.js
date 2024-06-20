@@ -2,8 +2,12 @@ import React from 'react'
 import Heading from '@/components/Heading'
 import Navbar from '@/components/Navbar'
 import Input from '@/components/Input'
+import { getContact } from '@/lib/data'
+import { updateContact } from '@/lib/action'
 
-const SingleContact = () => {
+const SingleContact = async ({ params }) => {
+    const { id } = params;
+    const contact = await getContact(id)
   return (
     <section>
         <Heading
@@ -13,14 +17,16 @@ const SingleContact = () => {
         <Navbar />
         <div className='flex flex-col py-4 px-4'>
             <form
+            action={updateContact}
             className='bg-gray-100 flex flex-col items-center p-2 rounded'
             >
                 <div className='flex mb-4'>
                 <div className='w-1/2 pr-2'>
-                    <input type='text' name='id' hidden />
+                    <input type='text' name='id' hidden value={contact.id} />
                     <label className='text-gray-700'>FirstName</label>
                     <Input
                     type='text'
+                    placeholder={contact.firstName}
                     name='firstName'
                     />
                 </div>
@@ -28,6 +34,7 @@ const SingleContact = () => {
                     <label className='text-gray-700'>LastName</label>
                     <Input
                     type='text'
+                    placeholder={contact.lastName}
                     name='lastName'
                     />
                 </div>
@@ -37,6 +44,7 @@ const SingleContact = () => {
                     <label className='text-gray-700'>Email</label>
                     <Input
                     type='text'
+                    placeholder={contact.email}
                     name='email'
                     />
                 </div>
@@ -44,6 +52,7 @@ const SingleContact = () => {
                     <label className='text-gray-700'>Contact Number</label>
                     <Input
                     type='number'
+                    placeholder={contact.phone}
                     name='phone'
                     />
                 </div>
