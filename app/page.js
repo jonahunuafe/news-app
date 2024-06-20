@@ -1,9 +1,14 @@
 import Navbar from "@/components/Navbar";
-import Image from "next/image";
+import Heading from "@/components/Heading";
+
 
 export default function Home() {
   return (
     <main>
+      {<Heading
+      title='Contact Book'
+      description='All Contacts Below'
+      /> }
       <Navbar />
     </main>
   );
