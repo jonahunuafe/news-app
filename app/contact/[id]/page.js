@@ -2,6 +2,7 @@ import React from 'react'
 import Heading from '@/components/Heading'
 import Navbar from '@/components/Navbar'
 import Input from '@/components/Input'
+import CreateFormSubmit from '@/components/CreateFormSubmit'
 import { getContact } from '@/lib/data'
 import { updateContact } from '@/lib/action'
 
@@ -57,11 +58,7 @@ const SingleContact = async ({ params }) => {
                     />
                 </div>
             </div>
-            <button 
-            className='btn btn-wide bg-orange-400'
-            type='submit'>
-                Update Contact
-            </button>
+            <CreateFormSubmit loadingText="Updating Contact..." text="Update Contact"/>
         </form>
         </div>
     </section>

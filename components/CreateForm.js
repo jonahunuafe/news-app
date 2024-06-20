@@ -48,7 +48,7 @@ const CreateForm = () => {
                     />
                 </div>
             </div>
-            <CreateFormSubmit />
+            <CreateFormSubmit loadingText="Creating Contact..." text="Create Contact" />
             </form>
         </div>
     )

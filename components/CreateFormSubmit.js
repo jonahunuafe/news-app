@@ -4,7 +4,7 @@ import React from 'react';
 import { useFormStatus } from 'react-dom';
 
 
-const CreateFormSubmit = () => {
+const CreateFormSubmit = ({ loadingText, text }) => {
     const { pending } = useFormStatus();
   
     return (
@@ -13,7 +13,7 @@ const CreateFormSubmit = () => {
             type='submit'
             disabled={pending}
         >
-            {pending ? 'Creating Contact...' : 'Create Contact'}
+            {pending ? loadingText : text}
         </button>
     )
 }
