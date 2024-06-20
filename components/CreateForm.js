@@ -2,6 +2,7 @@
 import React from 'react'
 import Input from './Input'
 import { addContact } from '@/lib/action'
+import CreateFormSubmit from './CreateFormSubmit'
 
 
 const CreateForm = () => {
@@ -47,9 +48,7 @@ const CreateForm = () => {
                     />
                 </div>
             </div>
-                <button 
-                className='btn btn-wide bg-orange-400'
-                type='submit'>Create Contact</button>
+            <CreateFormSubmit />
             </form>
         </div>
     )
