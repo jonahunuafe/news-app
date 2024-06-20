@@ -1,11 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Heading from "@/components/Heading";
+import Link from "next/link";
+import {FiTrash, FiEdit} from "react-icons/fi"
 import { getContacts } from "@/lib/data";
 import { deleteContact } from "@/lib/action";
 
 
 const HomePage  = async () => {
-  const contacts = await getContacts();
+  const contacts = await getContacts()
   return (
     <main>
       {<Heading
