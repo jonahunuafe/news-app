@@ -38,7 +38,7 @@ const HomePage  = async () => {
                 <th
                 className='px-4 py-3 title-font text-center tracking-wider font-medium text-gray-700 text-sm bg-gray-100'
                 >
-                Contact #
+                  Contact #
                 </th>
                 <th
                 className='px-4 py-3 title-font text-center tracking-wider font-medium text-gray-700 text-sm bg-gray-100'
@@ -50,28 +50,33 @@ const HomePage  = async () => {
             <tbody>
               {
                 contacts.map((contact) => (
-                  <tr key={contact.id}>
-                    <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.firstName}</td>
-                    <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.lastName}</td>
-                    <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.email}</td>
-                    <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.phone}</td>
-                    <td className='border-t-2 text-center border-gray-200 px-4 py-3 flex items-center gap-1'>
-                    <Link href={`editcontact/${contact.id}`}>
-                      <FiEdit />
-                    </Link>
-                    <form
-                      action={deleteContact}
-                    >
-                      <input hidden name='id' value={contact.id} />
-                      <button
-                        type='submit'
-                        className='mt-2'
-                      >
-                        <FiTrash style={{color: 'red'}} />
-                      </button>
-                    </form>
-                    </td>
-                  </tr>
+                  <>                  
+                    <tr key={contact.id}>
+                      <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.firstName}</td>
+                      <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.lastName}</td>
+                      <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.email}</td>
+                      <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.phone}</td>
+                      <td className='border-t-2 text-center border-gray-200 px-4 py-3 flex items-center gap-4'>
+                        <Link href={`editcontact/${contact.id}`}>
+                          <FiEdit />
+                        </Link>
+                        <form
+                          action={deleteContact}
+                        >
+                          <input hidden name='id' defaultValue={contact.id} />
+                          {/* <button
+                            type='submit'
+                            className='mt-2'
+                          >
+                            <FiTrash style={{color: 'red'}} />
+                          </button> */}
+                        </form>
+                      </td>
+                    </tr>
+                    <div className="text-center text-green-600 cursor-pointer">
+                      <Link href={`/details/${contact.id}`}>View Details</Link>
+                    </div>
+                  </>
                 ))
               }
             </tbody>

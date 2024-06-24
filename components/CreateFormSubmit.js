@@ -4,12 +4,12 @@ import React from 'react';
 import { useFormStatus } from 'react-dom';
 
 
-const CreateFormSubmit = ({ loadingText, text }) => {
+const CreateFormSubmit = ({ loadingText, text, className }) => {
     const { pending } = useFormStatus();
   
     return (
         <button 
-            className='btn btn-wide bg-orange-400'
+            className={className}
             type='submit'
             disabled={pending}
         >

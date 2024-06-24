@@ -58,7 +58,7 @@ const EditSingleContact = async ({ params }) => {
                     />
                 </div>
             </div>
-            <CreateFormSubmit loadingText="Updating Contact..." text="Update Contact"/>
+            <CreateFormSubmit  className='btn btn-wide bg-orange-400' loadingText="Updating Contact..." text="Update Contact"/>
         </form>
         </div>
     </section>

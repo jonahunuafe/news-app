@@ -48,7 +48,7 @@ const CreateForm = () => {
                     />
                 </div>
             </div>
-            <CreateFormSubmit loadingText="Creating Contact..." text="Create Contact" />
+            <CreateFormSubmit className="btn btn-wide bg-orange-400" loadingText="Creating Contact..." text="Create Contact" />
             </form>
         </div>
     )
