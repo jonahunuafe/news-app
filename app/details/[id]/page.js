@@ -21,7 +21,6 @@ const DetailsPage = async ({ params }) => {
             <CreateFormSubmit loadingText="deleting" text={<FiTrash style={{color: 'red'}} />}
             />
         </form>
-        This is the details page
     </div>
 
   )
