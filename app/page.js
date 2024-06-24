@@ -56,16 +56,16 @@ const HomePage  = async () => {
                     <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.email}</td>
                     <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.phone}</td>
                     <td className='border-t-2 text-center border-gray-200 px-4 py-3 flex items-center gap-1'>
-                    <Link href={`contact/${contact.id}`}>
+                    <Link href={`editcontact/${contact.id}`}>
                       <FiEdit />
                     </Link>
                     <form
-                    action={deleteContact}
+                      action={deleteContact}
                     >
                       <input hidden name='id' value={contact.id} />
                       <button
-                      type='submit'
-                      className='mt-2'
+                        type='submit'
+                        className='mt-2'
                       >
                         <FiTrash style={{color: 'red'}} />
                       </button>

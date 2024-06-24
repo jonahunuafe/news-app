@@ -6,7 +6,7 @@ import CreateFormSubmit from '@/components/CreateFormSubmit'
 import { getContact } from '@/lib/data'
 import { updateContact } from '@/lib/action'
 
-const SingleContact = async ({ params }) => {
+const EditSingleContact = async ({ params }) => {
     const { id } = params;
     const contact = await getContact(id)
   return (
@@ -65,4 +65,4 @@ const SingleContact = async ({ params }) => {
   )
 }
 
-export default SingleContact
+export default EditSingleContact
