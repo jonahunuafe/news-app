@@ -1,9 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Heading from "@/components/Heading";
 import Link from "next/link";
-import {FiTrash, FiEdit} from "react-icons/fi"
+import {FiEdit} from "react-icons/fi"
 import { getContacts } from "@/lib/data";
-import { deleteContact } from "@/lib/action";
 
 
 const HomePage  = async () => {
@@ -49,7 +48,7 @@ const HomePage  = async () => {
             </thead>
             <tbody>
               {
-                contacts.map((contact) => (                  
+                contacts.map((contact) => (                 
                   <tr key={contact.id}>
                     <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.firstName}</td>
                     <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.lastName}</td>
