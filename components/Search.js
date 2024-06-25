@@ -1,14 +1,17 @@
 "use client"
 
 import React from 'react'
+import { SearchNews } from '@/lib/action'
 
 const Search = () => {
   return (
     <div>
-        <form>
-            <input />
+        <form
+            action={SearchNews}
+        >
+            <input type="text" placeholder='Search...' />
             <button>
-                Search...
+                Search
             </button>
         </form>
     </div>
