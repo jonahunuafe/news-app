@@ -4,7 +4,6 @@ import React from 'react';
 import Link from "next/link";
 import Search from './Search';
 import {FiEdit} from "react-icons/fi";
-import { useState, useEffect } from "react";
 
 
 
@@ -16,7 +15,7 @@ const IndexPage = ({ contacts }) => {
     <div className='flex flex-col px-4 py-4'>
         <div>
             <p>Showing { totalContacts } { totalContacts > 1 ? "Users" : "User" }</p>
-            <Search  />
+            <Search />
             {totalContacts === 0 ? <p>No result returned</p> :  (
                 <table className='table-auto w-full text-center whitespace-nowrap'>
                 <thead>

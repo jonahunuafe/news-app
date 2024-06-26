@@ -1,14 +1,32 @@
 "use client"
 
 import React from 'react'
-import { useState } from 'react'
+import { useSearchParams } from 'next/navigation'
 
-const Search = () => {
-  const [searchTerm, setSearch] = useState()
+
+const Search = ({ placeholder }) => {
+  const searchParams = useSearchParams()
+
+  function handleSearch (SearchTerm) {
+    const params = new URLSearchParams(searchParams)
+    if(SearchTerm) {
+      params.set("query", SearchTerm);
+    } else {
+      params.delete("query")
+    }
+    console.log(SearchTerm)
+  }
+
   return (
-    <div>
-      
-    </div>
+    <>
+      <label>Search</label>
+      <input 
+        placeholder={placeholder}
+        onChange={(e) => {
+          handleSearch(e.target.value)
+        }}
+      /> 
+    </>
   )
 }
 
