@@ -1,22 +1,23 @@
 import Navbar from "@/components/Navbar";
 import Heading from "@/components/Heading";
-import Search from "@/components/Search";
-import Link from "next/link";
-import {FiEdit} from "react-icons/fi";
+import IndexPage from "@/components/HomePage";
+// import Link from "next/link";
+// import {FiEdit} from "react-icons/fi";
 import { getContacts } from "@/lib/data";
 
 
+
 const HomePage  = async () => {
-  const contacts = await getContacts()
+  const contacts = await getContacts();
   return (
     <main>
       {<Heading
       title='Contact Book'
       description='All Contacts Below'
       /> }
-      <Search />
       <Navbar />
-      <div className='flex flex-col px-4 py-4'>
+      <IndexPage contacts={contacts} />
+      {/* <div className='flex flex-col px-4 py-4'>
         <div>
           <table className='table-auto w-full text-center whitespace-nowrap'>
             <thead>
@@ -72,7 +73,7 @@ const HomePage  = async () => {
             </tbody>
           </table>
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
