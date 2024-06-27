@@ -24,21 +24,25 @@ const EditSingleContact = async ({ params }) => {
                 <div className='flex mb-4'>
                 <div className='w-1/2 pr-2'>
                     <input type='text' name='id' hidden value={contact.id} />
-                    <label className='text-gray-700'>FirstName</label>
+                    <label className='text-gray-700'>Headline</label>
                     <Input
                     type='text'
-                    placeholder={contact.firstName}
-                    name='firstName'
+                    placeholder={contact.headline}
+                    name='headline'
                     />
                 </div>
                 <div className='w-1/2 pr-2'>
-                    <label className='text-gray-700'>LastName</label>
+                    <label className='text-gray-700'>Creator</label>
                     <Input
                     type='text'
-                    placeholder={contact.lastName}
+                    placeholder={contact.creator}
                     name='lastName'
                     />
                 </div>
+            </div>
+            <div className='w-full'>
+                <label>Description</label>
+                <textarea placeholder={contact.description} name="description" rows='5' />
             </div>
             <div className='flex mb-4'>
                 <div className='w-1/2 pr-2'>
@@ -47,14 +51,6 @@ const EditSingleContact = async ({ params }) => {
                     type='text'
                     placeholder={contact.email}
                     name='email'
-                    />
-                </div>
-                <div className='w-1/2 pr-2'>
-                    <label className='text-gray-700'>Contact Number</label>
-                    <Input
-                    type='number'
-                    placeholder={contact.phone}
-                    name='phone'
                     />
                 </div>
             </div>

@@ -14,21 +14,25 @@ const CreateForm = () => {
             >
                 <div className='flex mb-4'>
                     <div className='w-1/2 pr-2'>
-                        <label className='text-gray-700'>FirstName</label>
+                        <label className='text-gray-700'>Headline</label>
                         <Input
                         type='text'
-                        placeholder="FirstName"
-                        name='firstName'
+                        placeholder="Headline"
+                        name='headline'
                         />
                     </div>
                     <div className='w-1/2 pr-2'>
-                        <label className='text-gray-700'>LastName</label>
+                        <label className='text-gray-700'>Creator</label>
                         <Input
                         type='text'
-                        placeholder="LastName"
-                        name='lastName'
+                        placeholder="Creator"
+                        name='creator'
                         />
                     </div>
+                </div>
+                <div className='w-full'>
+                    <label>Description</label>
+                    <textarea placeholder="description" name="description" rows='5' />
                 </div>
                 <div className='flex mb-4'>
                     <div className='w-1/2 pr-2'>
@@ -40,17 +44,14 @@ const CreateForm = () => {
                         />
                     </div>
                     <div className='w-1/2 pr-2'>
-                        <label className='text-gray-700'>Contact Number</label>
+                        <label className='text-gray-700'>Date</label>
                         <Input
-                        type='number'
-                        placeholder="Contact Number"
-                        name='phone'
+                        type='date'
+                        placeholder="Date"
+                        name='date'
                         />
                     </div>
-                </div>
-                <div>
-                    <label>Description</label>
-                    <textarea placeholder="description" name="description" rows='5' />
+
                 </div>
                 <CreateFormSubmit className="btn btn-wide bg-orange-400" loadingText="Creating Contact..." text="Create Contact" />
             </form>
