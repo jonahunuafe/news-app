@@ -5,6 +5,7 @@ import {FiEdit} from "react-icons/fi";
 import Search from "@/components/Search";
 import { getContacts } from "@/lib/data";
 import ImagePicker from "@/components/ImagePicker";
+import Image from "next/image";
 
 
 

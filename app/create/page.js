@@ -6,11 +6,11 @@ const CreatePage = () => {
   return (
     <section >
         <Heading
-            title="Add Contact"
-            description="Add Contacts Below"
+          title="Add Contact"
+          description="Add Contacts Below"
         />
         <div className='flex flex-col items-center justify-center'>
-            <CreateForm />
+          <CreateForm />
         </div>
     </section>
   )
