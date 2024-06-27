@@ -17,11 +17,10 @@ const ContactSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    date: {
-        type: Number,
-        dateAdded: new Date(),
-        required: true
-    }
+    // date: {
+    //     type: Date,
+    //     required: true
+    // }
     // imageUrl: {
     //     type: String,
     //     required: true
