@@ -48,6 +48,10 @@ const CreateForm = () => {
                         />
                     </div>
                 </div>
+                <div>
+                    <label>Description</label>
+                    <Input type='text' placeholder="description" name="description"  />
+                </div>
                 <CreateFormSubmit className="btn btn-wide bg-orange-400" loadingText="Creating Contact..." text="Create Contact" />
             </form>
         </div>

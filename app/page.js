@@ -1,9 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Heading from "@/components/Heading";
-import IndexPage from "@/components/HomePage";
-// import Link from "next/link";
-// import {FiEdit} from "react-icons/fi";
+import Link from "next/link";
+import {FiEdit} from "react-icons/fi";
+import Search from "@/components/Search";
 import { getContacts } from "@/lib/data";
+import ImagePicker from "@/components/ImagePicker";
 
 
 
@@ -11,13 +12,13 @@ const HomePage  = async () => {
   const contacts = await getContacts();
   return (
     <main>
+      <Search  />
       {<Heading
       title='Contact Book'
       description='All Contacts Below'
       /> }
       <Navbar />
-      <IndexPage contacts={contacts} />
-      {/* <div className='flex flex-col px-4 py-4'>
+      <div className='flex flex-col px-4 py-4'>
         <div>
           <table className='table-auto w-full text-center whitespace-nowrap'>
             <thead>
@@ -62,6 +63,7 @@ const HomePage  = async () => {
                         <FiEdit />
                       </Link>
                     </td>
+                    <td className='border-t-2 text-center border-gray-200 px-4 py-3'>{contact.description}</td>
                     <td>
                       <div className="text-center text-green-600 cursor-pointer">
                         <Link href={`/details/${contact.id}`}>View Details</Link>
@@ -73,7 +75,8 @@ const HomePage  = async () => {
             </tbody>
           </table>
         </div>
-      </div> */}
+      </div>
+      <ImagePicker label='Your image' name='image' />
     </main>
   );
 }

@@ -1,11 +1,13 @@
 "use client"
 
 import React from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, usePathname, useRouter } from 'next/navigation'
 
 
 const Search = ({ placeholder }) => {
-  const searchParams = useSearchParams()
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const { replace } = useRouter();
 
   function handleSearch (SearchTerm) {
     const params = new URLSearchParams(searchParams)
@@ -14,6 +16,7 @@ const Search = ({ placeholder }) => {
     } else {
       params.delete("query")
     }
+    replace(`${pathname}?${params.toString()}`)
     console.log(SearchTerm)
   }
 
@@ -25,6 +28,7 @@ const Search = ({ placeholder }) => {
         onChange={(e) => {
           handleSearch(e.target.value)
         }}
+        defaultValue={searchParams.get("query")?.toString()}
       /> 
     </>
   )
