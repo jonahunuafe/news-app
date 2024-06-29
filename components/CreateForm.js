@@ -10,7 +10,7 @@ const CreateForm = () => {
         <div className="w-[90%] md:w-[70%]">
             <form
                 action={addContact}
-                className='bg-gray-100 items-center p-2  rounded'
+                className='bg-gray-100 items-center p-2 rounded'
             >
                 <div className='flex mb-4'>
                     <div className='w-1/2 pr-2'>
@@ -61,9 +61,8 @@ const CreateForm = () => {
                         name='date'
                         />
                     </div>
-
                 </div>
-                <CreateFormSubmit className="btn btn-wide bg-orange-400" loadingText="Creating Contact..." text="Create Contact" />
+                <CreateFormSubmit className="bg-orange-400 px-3 py-1 rounded" loadingText="Creating Contact..." text="Create Contact" />
             </form>
         </div>
     )

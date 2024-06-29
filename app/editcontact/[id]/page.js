@@ -12,16 +12,16 @@ const EditSingleContact = async ({ params }) => {
   return (
     <section>
         <Heading
-            title='Single Contact'
-            description='View & Update Contact Below'
+            title='Did you Make a Typo or Need to Make Adjustment?.'
+            description='View & Update News Below!'
         />
         <Navbar />
-        <div className='flex flex-col py-4 px-4'>
+        <div className='w-[90%] md:w-[70%] m-auto'>
             <form
-            action={updateContact}
-            className='bg-gray-100 flex flex-col items-center p-2 rounded'
+                action={updateContact}
+                className='bg-gray-100 flex flex-col items-center p-2 rounded mt-10'
             >
-                <div className='flex mb-4'>
+            <div className='flex mb-4 w-[100%]'>
                 <div className='w-1/2 pr-2'>
                     <input type='text' name='id' hidden value={contact.id} />
                     <label className='text-gray-700'>Headline</label>
@@ -36,15 +36,20 @@ const EditSingleContact = async ({ params }) => {
                     <Input
                     type='text'
                     placeholder={contact.creator}
-                    name='lastName'
+                    name='creator'
                     />
                 </div>
             </div>
-            <div className='w-full'>
+            <div className='flex flex-col mb-4 w-[100%]'>
                 <label>Description</label>
-                <textarea placeholder={contact.description} name="description" rows='5' />
+                <textarea 
+                    className='rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus-outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent'
+                    placeholder={contact.description} 
+                    name="description" 
+                    rows='5' 
+                />
             </div>
-            <div className='flex mb-4'>
+            <div className='flex mb-4 w-[100%]'>
                 <div className='w-1/2 pr-2'>
                     <label className='text-gray-700'>Email</label>
                     <Input
@@ -53,12 +58,21 @@ const EditSingleContact = async ({ params }) => {
                     name='email'
                     />
                 </div>
+                <div className='w-1/2 pr-2'>
+                    <label htmlFor='date' className='text-gray-700'>Date</label>
+                    <Input
+                    type='date'
+                    id='date'
+                    placeholder="Date"
+                    name='date'
+                    />
+                </div>
             </div>
-            <CreateFormSubmit  className='btn btn-wide bg-orange-400' loadingText="Updating Contact..." text="Update Contact"/>
+            <CreateFormSubmit  className='bg-orange-400 px-3 py-1 rounded' loadingText="Updating Contact..." text="Update Contact"/>
         </form>
         </div>
     </section>
   )
 }
 
-export default EditSingleContact
+export default EditSingleContact;
