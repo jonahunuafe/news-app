@@ -11,6 +11,7 @@ import Card from "./ui/Card";
 
 const HomePage  = async () => {
   const contacts = await getContacts();
+
   return (
     <main>
       {/* <Search  /> */}
@@ -19,16 +20,16 @@ const HomePage  = async () => {
         title='Discover Latest News Around Your Community.'
         description='Alert your neighbours of current happenings around.'
       /> }
-      <div className="bg-gray-700">
+      <div className="bg-gray-700 h-[100vh]">
         <h1 className="text-center text-white">Create and share the latest events and incident that your witness.</h1>
-        <div className="flex flex-col md:flex-row px-4 py-4 gap-6">
+        <div className="flex flex-col px-4 py-4 gap-6">
           {
             contacts.map((contact) => (                 
               <Card key={contact.id}>
-                <h2>{contact.headline}</h2>
-                <h4>{contact.creator}</h4>
-                <p>{contact.description}</p>
-                <span>{contact.email}</span>
+                <h2 className="text-center">{contact.headline}</h2>
+                <p className="text-center">{contact.description}</p>
+                <h4 className="text-right">Source: {contact.creator}</h4>
+                <span className="text-center block">Email: {contact.email}</span>
                 <div>
                   <Link href={`editcontact/${contact.id}`}>
                     <FiEdit />
