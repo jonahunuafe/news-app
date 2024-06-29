@@ -29,7 +29,6 @@ const HomePage  = async () => {
                 <h2 className="text-center font-bold text-2xl">{contact.headline}</h2>
                 <p className="text-center">{contact.description}</p>
                 <h4 className="text-right">Source: {contact.creator}</h4>
-                <span className="text-center block">Email: {contact.email}</span>
                 <div>
                   <Link href={`editcontact/${contact.id}`}>
                     <FiEdit />

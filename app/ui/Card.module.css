@@ -1,13 +1,15 @@
 .card {
     background-color: #fff;
-    margin: auto;
     border-radius: 6px;
+    padding: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media(min-width: 768px) {
     .card {
         width: 70%;
+        margin: auto;
+        padding: 1rem 2rem;
     }
 }
   
