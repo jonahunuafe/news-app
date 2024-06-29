@@ -4,7 +4,7 @@ import {FiPlusCircle, FiHome} from "react-icons/fi"
 
 const Navbar = () => {
   return (
-    <nav className='flex gap-6 justify-between items-center cursor-pointer'>
+    <nav className='flex gap-6 justify-between items-center cursor-pointer bg-slate-700 text-white'>
         <Link 
             className='flex items-center gap-1'
             href={'/'}>
