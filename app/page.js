@@ -1,5 +1,5 @@
-import Navbar from "@/components/Navbar";
-import Heading from "@/components/Heading";
+// import Navbar from "@/components/Navbar";
+// import Heading from "@/components/Heading";
 import Link from "next/link";
 import {FiEdit} from "react-icons/fi";
 // import Search from "@/components/Search";
@@ -15,25 +15,25 @@ const HomePage  = async () => {
   return (
     <main>
       {/* <Search  /> */}
-      <Navbar />
-      {<Heading
-        title='Discover Latest News Around Your Community.'
-        description='Alert your neighbours of current happenings around.'
-      /> }
-      <div className="bg-gray-700">
-        <h1 className="text-center text-white font-semibold text-lg">Create and share the latest events and incident that your witness.</h1>
-        <div className="flex flex-col px-4 py-4 gap-6">
+      {/* <Navbar /> */}
+      {/* {<Heading */}
+        {/* title='Discover Latest News Around Your Community.'
+        description='Alert your neighbours of current happenings around.' */}
+      {/* /> } */}
+      <div>
+        <h1>Create and share the latest events and incident that your witness.</h1>
+        <div>
           {
             contacts.map((contact) => (                 
               <Card key={contact.id}>
-                <h2 className="text-center font-bold text-2xl">{contact.headline}</h2>
-                <p className="text-center">{contact.description}</p>
+                <h2>{contact.headline}</h2>
+                <p>{contact.description}</p>
                 <div>
                   <Link href={`editcontact/${contact.id}`}>
                     <FiEdit />
                   </Link>
                 </div>
-                <div className="text-center text-green-600 cursor-pointer">
+                <div>
                   <Link href={`/details/${contact.id}`}>View Details</Link>
                 </div>
                 {/* <ImagePicker label='Your image' name='image' /> */}
