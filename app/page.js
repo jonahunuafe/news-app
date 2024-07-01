@@ -20,7 +20,7 @@ const HomePage  = async () => {
         title='Discover Latest News Around Your Community.'
         description='Alert your neighbours of current happenings around.'
       />}
-      <div className="bg-gray-700 pb-8">
+      <div className="bg-gray-800 pb-8">
         <h1 className="text-center text-white font-medium text-xl md:text-3xl py-5 px-4">Create and share the latest events and incident that your witness.</h1>
         <div className="flex flex-col gap-6">
           {
