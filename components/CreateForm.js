@@ -62,7 +62,7 @@ const CreateForm = () => {
                         />
                     </div>
                 </div>
-                <CreateFormSubmit className="bg-orange-400 px-3 py-1 rounded" loadingText="Creating Contact..." text="Create Contact" />
+                <CreateFormSubmit className="bg-orange-400 px-3 py-1 rounded mb-1" loadingText="Posting News..." text="Post News" />
             </form>
         </div>
     )

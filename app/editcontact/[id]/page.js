@@ -68,7 +68,7 @@ const EditSingleContact = async ({ params }) => {
                     />
                 </div>
             </div>
-            <CreateFormSubmit  className='bg-orange-400 px-3 py-1 rounded' loadingText="Updating Contact..." text="Update Contact"/>
+            <CreateFormSubmit  className='bg-orange-400 px-3 py-1 rounded' loadingText="Updating News..." text="Update News"/>
         </form>
         </div>
     </section>
