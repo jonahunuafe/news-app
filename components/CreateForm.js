@@ -52,15 +52,6 @@ const CreateForm = () => {
                         name='email'
                         />
                     </div>
-                    <div className='w-1/2 pr-2'>
-                        <label htmlFor='date' className='text-gray-700'>Date</label>
-                        <Input
-                        type='date'
-                        id='date'
-                        placeholder="Date"
-                        name='date'
-                        />
-                    </div>
                 </div>
                 <CreateFormSubmit className="bg-orange-400 px-3 py-1 rounded mb-1" loadingText="Posting News..." text="Post News" />
             </form>

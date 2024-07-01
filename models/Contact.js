@@ -17,14 +17,6 @@ const ContactSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    // date: {
-    //     type: Date,
-    //     required: true
-    // }
-    // imageUrl: {
-    //     type: String,
-    //     required: true
-    // }
 }, 
 {timestamps: true}
 )
