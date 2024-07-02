@@ -43,7 +43,7 @@ const CreateForm = () => {
                     />
                 </div>
                 <div className='flex mb-4'>
-                    <div className='w-1/2 pr-2'>
+                    <div className='w-full pr-2'>
                         <label htmlFor='email' className='text-gray-700'>Email</label>
                         <Input
                         type='text'
