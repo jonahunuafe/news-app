@@ -6,7 +6,7 @@ import CustomSubmitBtn from '@/components/CustomSubmitBtn'
 import { getSpecificNews } from '@/lib/data'
 import { updateNews } from '@/lib/action'
 
-const EditSingleContact = async ({ params }) => {
+const EditSpecifiNews = async ({ params }) => {
     const { id } = params;
     const specificNews = await getSpecificNews(id)
   return (
@@ -23,7 +23,7 @@ const EditSingleContact = async ({ params }) => {
             >
             <div className='flex mb-4 w-[100%]'>
                 <div className='w-1/2 pr-2'>
-                    <input type='text' name='id' hidden value={specificNews.id} />
+                    <input type='text' name='id' hidden defaultValue={specificNews.id} />
                     <label className='text-gray-700'>Headline</label>
                     <Input
                     type='text'
@@ -66,4 +66,4 @@ const EditSingleContact = async ({ params }) => {
   )
 }
 
-export default EditSingleContact;
+export default EditSpecifiNews;

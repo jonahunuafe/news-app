@@ -12,6 +12,8 @@ import Card from "./ui/Card";
 const HomePage  = async () => {
   const allNews = await getAllNews();
 
+  const numOfPost = allNews.length;
+
   return (
     <main>
       {/* <Search  /> */}
@@ -21,6 +23,9 @@ const HomePage  = async () => {
         description='Alert your neighbours of current happenings around.'
       />}
       <div className="bg-gray-800 pb-8">
+        <p className="text-white text-center">
+          {numOfPost > 1 ? `There are ${numOfPost} News Posted` : `There is ${numOfPost} News Posted` }
+        </p>
         <h1 className="text-center text-white font-medium text-xl md:text-3xl py-5 px-4">
           Create and share latest events and incident that your witness.
         </h1>
@@ -31,7 +36,7 @@ const HomePage  = async () => {
                 <h2 className="text-center text-2xl font-bold py-4">{news.headline}</h2>
                 <p>{news.description}</p>
                 <div className="flex justify-between px-4 py-6">
-                  <Link href={`editcontact/${news.id}`}>
+                  <Link href={`editnews/${news.id}`}>
                     <FiEdit />
                   </Link>
                   <Link href={`/details/${news.id}`} className="text-orange-400 font-medium">View Details</Link>
