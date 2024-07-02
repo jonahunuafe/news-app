@@ -23,12 +23,12 @@ const HomePage  = async () => {
         description='Alert your neighbours of current happenings around.'
       />}
       <div className="bg-gray-800 pb-8">
-        <p className="text-white text-center">
-          {numOfPost > 1 ? `There are ${numOfPost} News Posted` : `There is ${numOfPost} News Posted` }
-        </p>
         <h1 className="text-center text-white font-medium text-xl md:text-3xl py-5 px-4">
           Create and share latest events and incident that your witness.
         </h1>
+        <p className="text-white text-center pb-5 font-medium text-lg">
+          {numOfPost > 1 ? `There are ${numOfPost} News Posted` : `There is ${numOfPost} News Posted`}
+        </p>
         <div className="flex flex-col gap-6">
           {
             allNews.map((news) => (                 
