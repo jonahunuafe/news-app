@@ -1,15 +1,15 @@
 'use client'
 import React from 'react'
 import Input from './Input'
-import { addContact } from '@/lib/action'
-import CreateFormSubmit from './CreateFormSubmit'
+import { addNews } from '@/lib/action'
+import CustomSubmitBtn from './CustomSubmitBtn'
 
 
 const CreateForm = () => {
     return (
         <div className="w-[90%] md:w-[70%]">
             <form
-                action={addContact}
+                action={addNews}
                 className='bg-gray-100 items-center p-2 rounded'
             >
                 <div className='flex mb-4'>
@@ -53,7 +53,7 @@ const CreateForm = () => {
                         />
                     </div>
                 </div>
-                <CreateFormSubmit className="bg-orange-400 px-3 py-1 rounded mb-1" loadingText="Posting News..." text="Post News" />
+                <CustomSubmitBtn className="bg-orange-400 px-3 py-1 rounded mb-1" loadingText="Posting News..." text="Post News" />
             </form>
         </div>
     )

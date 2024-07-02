@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ContactSchema = new mongoose.Schema({
+const NewsSchema = new mongoose.Schema({
     headline: {
         type: String,
         required: true
@@ -21,4 +21,4 @@ const ContactSchema = new mongoose.Schema({
 {timestamps: true}
 )
 
-export default mongoose?.models?.Crud || mongoose.model("Crud", ContactSchema)
+export default mongoose?.models?.Crud || mongoose.model("Crud", NewsSchema)

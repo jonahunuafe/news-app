@@ -2,13 +2,13 @@ import React from 'react'
 import Heading from '@/components/Heading'
 import Navbar from '@/components/Navbar'
 import Input from '@/components/Input'
-import CreateFormSubmit from '@/components/CreateFormSubmit'
-import { getContact } from '@/lib/data'
-import { updateContact } from '@/lib/action'
+import CustomSubmitBtn from '@/components/CustomSubmitBtn'
+import { getSpecificNews } from '@/lib/data'
+import { updateNews } from '@/lib/action'
 
 const EditSingleContact = async ({ params }) => {
     const { id } = params;
-    const contact = await getContact(id)
+    const specificNews = await getSpecificNews(id)
   return (
     <section>
         <Heading
@@ -18,16 +18,16 @@ const EditSingleContact = async ({ params }) => {
         <Navbar />
         <div className='w-[90%] md:w-[70%] m-auto'>
             <form
-                action={updateContact}
+                action={updateNews}
                 className='bg-gray-100 flex flex-col items-center p-2 rounded mt-10'
             >
             <div className='flex mb-4 w-[100%]'>
                 <div className='w-1/2 pr-2'>
-                    <input type='text' name='id' hidden value={contact.id} />
+                    <input type='text' name='id' hidden value={specificNews.id} />
                     <label className='text-gray-700'>Headline</label>
                     <Input
                     type='text'
-                    placeholder={contact.headline}
+                    placeholder={specificNews.headline}
                     name='headline'
                     />
                 </div>
@@ -35,7 +35,7 @@ const EditSingleContact = async ({ params }) => {
                     <label className='text-gray-700'>Creator</label>
                     <Input
                     type='text'
-                    placeholder={contact.creator}
+                    placeholder={specificNews.creator}
                     name='creator'
                     />
                 </div>
@@ -44,7 +44,7 @@ const EditSingleContact = async ({ params }) => {
                 <label>Description</label>
                 <textarea 
                     className='rounded-lg border-transparent flex-1 appearance-none border border-gray-300 w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm text-base focus-outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent'
-                    placeholder={contact.description} 
+                    placeholder={specificNews.description} 
                     name="description" 
                     rows='5' 
                 />
@@ -54,12 +54,12 @@ const EditSingleContact = async ({ params }) => {
                     <label className='text-gray-700'>Email</label>
                     <Input
                     type='text'
-                    placeholder={contact.email}
+                    placeholder={specificNews.email}
                     name='email'
                     />
                 </div>
             </div>
-            <CreateFormSubmit  className='bg-orange-400 px-3 py-1 rounded' loadingText="Updating News..." text="Update News"/>
+            <CustomSubmitBtn  className='bg-orange-400 px-3 py-1 rounded' loadingText="Updating News..." text="Update News"/>
         </form>
         </div>
     </section>
