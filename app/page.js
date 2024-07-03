@@ -27,7 +27,11 @@ const HomePage  = async () => {
           Create and share latest events and incident that your witness.
         </h1>
         <p className="text-white text-center pb-5 font-medium text-lg">
-          {numOfPost > 1 ? `There are ${numOfPost} News Posted` : `There is ${numOfPost} News Posted`}
+          {
+            numOfPost > 1 ? `There are ${numOfPost} News Posted` : 
+            numOfPost === 1 ? `There is ${numOfPost} News Posted ?` : 
+            `There are ${numOfPost} News Posted`
+          }
         </p>
         <div className="flex flex-col gap-6">
           {
