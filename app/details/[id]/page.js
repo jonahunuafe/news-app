@@ -13,7 +13,12 @@ const DetailsPage = async ({ params }) => {
     <div className="flex justify-center flex-col px-6 md:w-[70%] m-auto">
       <div className='h-1 w-[70%] md:w-[100%] bg-orange-400 rounded mx-auto mb-6 mt-10'></div>
       <h2 className="text-center font-bold text-2xl py-6 text-gray-800">{specificNews.headline}</h2>
-      <p className="text-gray-800">{specificNews.description}</p>
+      <p 
+        className="text-gray-800"
+        dangerouslySetInnerHTML={{
+        __html: specificNews.description.replace(/\n/g, '<br />'),
+        }}>
+      </p>
       <h4 className="text-right text-gray-800 pt-4">Source: {specificNews.creator}</h4>
       <div className="flex align-bottom justify-between">
         <form
@@ -27,7 +32,9 @@ const DetailsPage = async ({ params }) => {
         </form>
         <span className="text-right block text-gray-800">Email: {specificNews.email}</span>
       </div>
-      <Link href="/" className="text-center font-medium mt-7 text-green-600 border-lime-500 border-2 w-[max-content] mx-auto px-4 py-2 rounded-full">Back to Home Page</Link>
+      <Link href="/" className="text-center font-medium mt-7 text-green-600 border-lime-500 border-2 w-[max-content] mx-auto px-4 py-2 rounded-full">
+        Back to Home Page
+      </Link>
       <div className='h-1 w-[70%] md:w-[100%] mx-auto bg-orange-400 rounded my-10'></div>
     </div>
   )

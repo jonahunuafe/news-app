@@ -38,7 +38,11 @@ const HomePage  = async () => {
             allNews.map((news) => (                 
               <Card key={news.id}>
                 <h2 className="text-center text-2xl font-bold py-4">{news.headline}</h2>
-                <p>{news.description}</p>
+                <p 
+                  className="text-gray-800"
+                  dangerouslySetInnerHTML={{
+                  __html: news.description.replace(/\n/g, '<br />'),
+                }}></p>
                 <div className="flex justify-between px-4 py-6">
                   <Link href={`editnews/${news.id}`}>
                     <FiEdit />
