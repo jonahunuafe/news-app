@@ -1,15 +1,17 @@
 'use client'
 import React from 'react';
+import { useFormState } from 'react-dom';
 import Input from './Input';
 import { addNews } from '@/lib/action';
 import CustomSubmitBtn from './CustomSubmitBtn';
 
 
 const CreateForm = () => {
+    const [state, formAction] = useFormState(addNews, {message: null});
     return (
         <div className="w-[90%] md:w-[70%] mb-10">
             <form
-                action={addNews}
+                action={formAction}
                 className='bg-gray-100 items-center p-2 rounded'
             >
                 <div className='flex mb-4'>
@@ -53,6 +55,7 @@ const CreateForm = () => {
                         />
                     </div>
                 </div>
+                {state.message && <p>{state.message}</p>}
                 <CustomSubmitBtn className="bg-orange-400 px-3 py-1 rounded mb-1" loadingText="Posting News..." text="Post News" />
             </form>
         </div>
