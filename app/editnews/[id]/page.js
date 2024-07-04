@@ -1,10 +1,10 @@
-import React from 'react'
-import Heading from '@/components/Heading'
-import Navbar from '@/components/Navbar'
-import Input from '@/components/Input'
-import CustomSubmitBtn from '@/components/CustomSubmitBtn'
-import { getSpecificNews } from '@/lib/data'
-import { updateNews } from '@/lib/action'
+import React from 'react';
+import Heading from '@/components/Heading';
+import Navbar from '@/components/Navbar';
+import Input from '@/components/Input';
+import CustomSubmitBtn from '@/components/CustomSubmitBtn';
+import { getSpecificNews } from '@/lib/data';
+import { updateNews } from '@/lib/action';
 
 const EditSpecifiNews = async ({ params }) => {
     const { id } = params;
