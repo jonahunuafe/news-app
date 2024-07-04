@@ -27,7 +27,7 @@ const HomePage  = async () => {
           <h1 className="text-center text-white font-medium text-xl md:text-3xl py-5 px-4">
             Create and share latest events and incident that your witness.
           </h1>
-          <p className="text-white text-center px-3 py-1 font-medium text-lg border-l-2 border-slate-300 w-max m-auto rounded-full mb-4">
+          <p className="text-white text-center px-3 py-1 font-medium text-lg border-b-2 border-slate-300 w-max m-auto rounded-full mb-4">
             {
               numOfPost > 1 ? `There are ${numOfPost} News Posted` : 
               numOfPost === 1 ? `There is only ${numOfPost} News Posted` : 
