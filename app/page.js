@@ -15,25 +15,29 @@ const HomePage  = async () => {
   const numOfPost = allNews.length;
 
   return (
-    <main className="bg-emerald-800">
-      {/* <Search  /> */}
-      {<Navbar />}
-      {<Heading
-        title='Discover Latest News Around Your Community.'
-        description='Alert your neighbours of current happenings around.'
-      />}
-      <div className="pb-8">
-        <h1 className="text-center text-white font-medium text-xl md:text-3xl py-5 px-4">
-          Create and share latest events and incident that your witness.
-        </h1>
-        <p className="text-white text-center pb-5 font-medium text-lg">
-          {
-            numOfPost > 1 ? `There are ${numOfPost} News Posted` : 
-            numOfPost === 1 ? `There is only ${numOfPost} News Posted` : 
-            `There are ${numOfPost} News Posted`
-          }
-        </p>
-        <div className="flex flex-col gap-6">
+    <>
+      <header>
+        {/* <Search  /> */}
+        {<Navbar />}
+        {<Heading
+          title='Discover Latest News Around Your Community.'
+          description='Alert your neighbours of current happenings around.'
+        />}
+        <div className="pb-8">
+          <h1 className="text-center text-gray-800 font-medium text-xl md:text-3xl py-5 px-4">
+            Create and share latest events and incident that your witness.
+          </h1>
+          <p className="text-gray-800 text-center px-3 py-1 font-medium text-lg border-2 border-gray-700 w-max m-auto rounded mb-6">
+            {
+              numOfPost > 1 ? `There are ${numOfPost} News Posted` : 
+              numOfPost === 1 ? `There is only ${numOfPost} News Posted` : 
+              `There are ${numOfPost} News Posted`
+            }
+          </p>
+        </div>
+      </header>
+      <main>
+        <div className="flex flex-col gap-6 mb-6">
           {
             allNews.map((news) => (                 
               <Card key={news.id}>
@@ -54,8 +58,8 @@ const HomePage  = async () => {
             ))
           }
         </div>
-      </div>
-    </main>
+      </main>
+    </>
   );
 }
 
