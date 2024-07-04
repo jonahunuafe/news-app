@@ -10,15 +10,14 @@ const DetailsPage = async ({ params }) => {
   const specificNews = await getSpecificNews(id)
 
   return (
-    <div className="flex justify-center flex-col px-6 md:w-[70%] m-auto">
+    <div className="flex justify-center flex-col px-6 md:w-[70%] m-auto break-words">
       <div className='h-1 w-[70%] md:w-[100%] bg-orange-400 rounded mx-auto mb-6 mt-10'></div>
       <h2 className="text-center font-bold text-2xl py-6 text-gray-800">{specificNews.headline}</h2>
       <p 
         className="text-gray-800"
         dangerouslySetInnerHTML={{
         __html: specificNews.description.replace(/\n/g, '<br />'),
-        }}>
-      </p>
+      }}></p>
       <h4 className="text-right text-gray-800 pt-4">Source: {specificNews.creator}</h4>
       <div className="flex align-bottom justify-between">
         <form

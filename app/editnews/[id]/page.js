@@ -12,7 +12,7 @@ const EditSpecifiNews = async ({ params }) => {
   return (
     <section>
         <Heading
-            title='Did you Make a Typo or Need to Make Adjustment?.'
+            title='Did you Make a Typo or Need to Make Adjustment?'
             description='View & Update News Below!'
         />
         <Navbar />
