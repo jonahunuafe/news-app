@@ -39,7 +39,7 @@ const HomePage  = async () => {
               <Card key={news.id}>
                 <h2 className="text-center text-2xl font-bold py-4">{news.headline}</h2>
                 <p 
-                  className="text-gray-800"
+                  className="text-red-600"
                   dangerouslySetInnerHTML={{
                   __html: news.description.replace(/\n/g, '<br />'),
                 }}></p>
