@@ -16,7 +16,7 @@ const EditSpecifiNews = async ({ params }) => {
             description='View & Update News Below!'
         />
         <Navbar />
-        <div className='w-[90%] md:w-[70%] m-auto'>
+        <div className='w-[90%] md:w-[70%] m-auto mb-10'>
             <form
                 action={updateNews}
                 className='bg-gray-100 flex flex-col items-center p-2 rounded mt-10'

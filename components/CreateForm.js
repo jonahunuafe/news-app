@@ -1,13 +1,13 @@
 'use client'
-import React from 'react'
-import Input from './Input'
-import { addNews } from '@/lib/action'
-import CustomSubmitBtn from './CustomSubmitBtn'
+import React from 'react';
+import Input from './Input';
+import { addNews } from '@/lib/action';
+import CustomSubmitBtn from './CustomSubmitBtn';
 
 
 const CreateForm = () => {
     return (
-        <div className="w-[90%] md:w-[70%]">
+        <div className="w-[90%] md:w-[70%] mb-10">
             <form
                 action={addNews}
                 className='bg-gray-100 items-center p-2 rounded'
