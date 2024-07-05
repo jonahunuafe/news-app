@@ -55,7 +55,11 @@ const CreateForm = () => {
                         />
                     </div>
                 </div>
-                {state.message && <p>{state.message}</p>}
+                {state.message && 
+                    <p className='text-center bg-red-100 text-red-500 w-max m-auto py-1 px-3 rounded mb-3'>
+                        {state.message}
+                    </p>
+                }
                 <CustomSubmitBtn className="bg-orange-400 px-3 py-1 rounded mb-1" loadingText="Posting News..." text="Post News" />
             </form>
         </div>
