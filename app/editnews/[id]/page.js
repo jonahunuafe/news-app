@@ -11,11 +11,11 @@ const EditSpecifiNews = async ({ params }) => {
     const specificNews = await getSpecificNews(id)
   return (
     <section>
+        <Navbar />
         <Heading
             title='Did you Make a Typo or Need to Make Adjustment?'
             description='View & Update News Below!'
         />
-        <Navbar />
         <div className='w-[90%] md:w-[70%] m-auto mb-10'>
             <form
                 action={updateNews}
