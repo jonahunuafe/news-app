@@ -18,8 +18,8 @@ const DetailsPage = async ({ params }) => {
         dangerouslySetInnerHTML={{
         __html: specificNews.description.replace(/\n/g, '<br />'),
       }}></p>
-      <h4 className="text-right text-white pt-4">Source: {specificNews.creator}</h4>
-      <div className="flex align-bottom justify-between">
+      <h4 className="text-right text-white pt-4 mb-2">Source: {specificNews.creator}</h4>
+      <div className="flex justify-between">
         <form
           action={deleteNews}
         >
@@ -29,8 +29,13 @@ const DetailsPage = async ({ params }) => {
             text={<FiTrash className="text-orange-400 text-lg" />}
           />
         </form>
-        <span className="text-right block text-white">Email: {specificNews.email}</span>
+        <span className="text-right block text-white">
+          Email: {specificNews.email}
+        </span>
       </div>
+      <span className="text-green-400 font-medium text-right block mt-3">
+        Posted on: {specificNews.createdAt.toLocaleString()}
+      </span>
       <Link href="/" className="text-center font-medium mt-7 text-green-400 border-lime-500 border-2 w-[max-content] mx-auto px-4 py-2 rounded-full">
         Back to Home Page
       </Link>
