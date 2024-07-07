@@ -54,6 +54,15 @@ const CreateForm = () => {
                         name='email'
                         />
                     </div>
+                    <div className='w-full'>
+                        <label htmlFor='date' className='text-gray-700'>Date</label>
+                        <Input
+                        type='date'
+                        id='date'
+                        placeholder='Date'
+                        name='createdAt'
+                        />
+                    </div>
                 </div>
                 {state.message && 
                     <p className='text-center bg-red-100 text-red-500 w-max m-auto py-1 px-3 rounded mb-3'>
