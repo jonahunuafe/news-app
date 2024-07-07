@@ -53,6 +53,9 @@ const HomePage  = async () => {
                   </Link>
                   <Link href={`/details/${news.id}`} className="text-orange-400 font-medium">View Details</Link>
                 </div>
+                <p className="text-red-600">
+                  {news.createdAt.toLocaleString()}
+                </p>
                 {/* <ImagePicker label='Your image' name='image' /> */}
               </Card>
             ))
