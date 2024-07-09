@@ -4,8 +4,11 @@ import { deleteNews } from '@/lib/action';
 import CustomSubmitBtn from '@/components/CustomSubmitBtn';
 import {FiTrash} from "react-icons/fi";
 import Link from "next/link";
+import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 
 const DetailsPage = async ({ params }) => {
+  const { getUser } = getKindeServerSession()
+  const user = await getUser();
   const { id } = params;
   const specificNews = await getSpecificNews(id)
 
@@ -24,10 +27,16 @@ const DetailsPage = async ({ params }) => {
           action={deleteNews}
         >
           <input hidden name='id' defaultValue={specificNews.id} />
-          <CustomSubmitBtn 
-            loadingText={<p className='bg-red-100 text-red-600 rounded p-3'>Deleting...</p>} 
-            text={<FiTrash className="text-orange-400 text-lg" />}
-          />
+
+          {
+            user.email !== "fejisfejiro@gmail.com" || user.email !== "krebedev@gmail.com" && (
+              <CustomSubmitBtn 
+              loadingText={<p className='bg-red-100 text-red-600 rounded p-3'>Deleting...</p>} 
+              text={<FiTrash className="text-orange-400 text-lg" />}
+              />
+            )
+          }
+
         </form>
         <span className="text-right block text-white">
           Email: {specificNews.email}
