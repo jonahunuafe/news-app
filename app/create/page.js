@@ -19,19 +19,11 @@ const CreatePage = async () => {
     </section>
     ) : (
       <div>
-        This page is protected, please <LoginLink>Login</LoginLink> to view it
+        <h1>You can only create a post when you are logged in</h1>
+        <p><LoginLink>Login</LoginLink></p>
       </div>
     )
   )
 }
 
-  // <section >
-  //     <Heading
-  //       title="Fill in the Form Below to Make a Post of Latest News."
-  //       description="News Based on Assumption and False claim is highly Prohibited!"
-  //     />
-  //     <div className='flex flex-col items-center justify-center mt-10'>
-  //       <CreateForm />
-  //     </div>
-  // </section>
 export default CreatePage
