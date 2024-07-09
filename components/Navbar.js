@@ -7,7 +7,6 @@ import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
-  console.log(user)
   return (
     <nav className='flex flex-col md:flex-row justify-between items-center bg-zinc-800 px-8 py-6'>
       <Link href={'/'} className='text-white font-bold text-base md:text-lg font-serif border-b-2 md:border-b-0 pb-1 md:pb-0'>The News Room</Link>
@@ -24,16 +23,19 @@ const Navbar = async () => {
         >
           <FiPlusCircle /> <span>Create</span>
         </Link>
-        <div className='flex gap-10'>
-          {
-            user ? <LogoutLink>Logout</LogoutLink> : (
-              <>
-                <LoginLink>Sign in</LoginLink>
-                <RegisterLink>Sign up</RegisterLink>
-              </>
-            )
-          }
-        </div>
+        {
+          user ? 
+            <div>
+              <p>{user.given_name}</p>
+              <LogoutLink>Logout</LogoutLink>
+            </div>
+            : (
+            <div className='flex gap-10'>
+              <LoginLink>Sign in</LoginLink>
+              <RegisterLink>Sign up</RegisterLink>
+            </div>
+          )
+        }
       </div>
     </nav>
   )
