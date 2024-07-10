@@ -18,9 +18,13 @@ const CreatePage = async () => {
       </div>
     </section>
     ) : (
-      <div>
-        <h1>You can only create a post when you are logged in</h1>
-        <p><LoginLink>Login</LoginLink></p>
+      <div className='flex flex-col items-center mt-56'>
+        <h1 className='text-center text-white px-3 text-lg'>
+          You Want to Create a Post?
+        </h1>
+        <button className='text-white bg-green-500 py-1 px-2 mt-3 hover:bg-green-400 rounded-md'>
+          <LoginLink>Login</LoginLink>
+        </button>
       </div>
     )
   )
