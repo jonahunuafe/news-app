@@ -1,12 +1,12 @@
+"use server"
+
 import Navbar from "@/components/Navbar";
 import Heading from "@/components/Heading";
 import Link from "next/link";
 import {FiEdit} from "react-icons/fi";
-// import Search from "@/components/Search";
 import { getAllNews } from "@/lib/data";
 // import ImagePicker from "@/components/ImagePicker";
 import Card from "./ui/Card";
-
 
 
 const HomePage  = async () => {
@@ -17,7 +17,6 @@ const HomePage  = async () => {
   return (
     <>
       <header>
-        {/* <Search  /> */}
         <Navbar />
         <Heading
           title='Discover Latest News Around Your Community.'
