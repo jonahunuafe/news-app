@@ -1,13 +1,15 @@
 import React from 'react'
 import { getSpecificNews } from '@/lib/data';
-import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import Link from "next/link";
 import Modal from '@components/Modal';
+import {FiTrash} from "react-icons/fi";
 
 
 const DetailsPage = async ({ params }) => {
-  const { getPermissions } = getKindeServerSession();
-  const userPermissions = (await getPermissions())?.permissions;
+
+  
+
+
 
   const { id } = params;
   const specificNews = await getSpecificNews(id)
@@ -24,9 +26,11 @@ const DetailsPage = async ({ params }) => {
       }}></p>
       <h4 className="text-right text-white pt-4 mb-2">Source: {specificNews.creator}</h4>
       <div className="flex justify-between">
-        <Link href="?modal=true">
-          <button type="button" className="bg-blue-500 text-white p-2">Delete Post</button>
-        </Link>
+        { 
+          <Link href="?modal=true">
+            <FiTrash className="text-orange-400 text-lg" />
+          </Link> 
+        }
         <span className="text-right block text-white">
           Email: {specificNews.email}
         </span>
@@ -39,7 +43,7 @@ const DetailsPage = async ({ params }) => {
       </Link>
       <div className='h-1 w-[70%] md:w-[100%] mx-auto bg-orange-400 rounded my-10'></div>
     </div>
-    {userPermissions && <Modal id={specificNews.id} />}
+    <Modal id={specificNews.id} />
     </>
   )
 }
