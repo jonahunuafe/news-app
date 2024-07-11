@@ -1,9 +1,11 @@
 import React from 'react'
 import { getSpecificNews } from '@/lib/data';
-import { deleteNews } from '@/lib/action';
-import CustomSubmitBtn from '@/components/CustomSubmitBtn';
-import {FiTrash} from "react-icons/fi";
+// import { deleteNews } from '@/lib/action';
+// import CustomSubmitBtn from '@/components/CustomSubmitBtn';
+// import {FiTrash} from "react-icons/fi";
+// import DeletePost from '@components/DeletePost';
 import Link from "next/link";
+import Modal from '@components/Modal';
 
 
 const DetailsPage = async ({ params }) => {
@@ -11,6 +13,7 @@ const DetailsPage = async ({ params }) => {
   const specificNews = await getSpecificNews(id)
 
   return (
+    <>
     <div className="flex justify-center flex-col px-6 md:w-[70%] m-auto break-words">
       <div className='h-1 w-[70%] md:w-[100%] bg-orange-400 rounded mx-auto mb-6 mt-12'></div>
       <h2 className="text-center font-bold text-2xl py-6 text-green-400">{specificNews.headline}</h2>
@@ -21,15 +24,15 @@ const DetailsPage = async ({ params }) => {
       }}></p>
       <h4 className="text-right text-white pt-4 mb-2">Source: {specificNews.creator}</h4>
       <div className="flex justify-between">
-        <form
+        {/* <form
           action={deleteNews}
         >
           <input hidden name='id' defaultValue={specificNews.id} />
-            <CustomSubmitBtn 
-            loadingText={<p className='bg-red-100 text-red-600 rounded p-3'>Deleting...</p>} 
-            text={<FiTrash className="text-orange-400 text-lg" />}
-          />
-        </form>
+          <DeletePost />
+        </form> */}
+        <Link href="?modal=true">
+          <button type="button" className="bg-blue-500 text-white p-2">Open Modal</button>
+        </Link>
         <span className="text-right block text-white">
           Email: {specificNews.email}
         </span>
@@ -42,6 +45,8 @@ const DetailsPage = async ({ params }) => {
       </Link>
       <div className='h-1 w-[70%] md:w-[100%] mx-auto bg-orange-400 rounded my-10'></div>
     </div>
+    <Modal />
+    </>
   )
 }
 
