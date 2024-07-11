@@ -3,7 +3,8 @@
 import React from 'react';
 import { deleteNews } from '@lib/action';
 import { useSearchParams, usePathname } from 'next/navigation';
-import DeletePost from './DeletePost';
+// import DeletePost from './DeletePost';
+import CustomSubmitBtn from '@/components/CustomSubmitBtn';
 import Link from "next/link";
 
 const Modal = ({ id }) => {
@@ -20,11 +21,14 @@ const Modal = ({ id }) => {
                             action={deleteNews}
                         >
                         <input hidden name='id' defaultValue={id} />
-                            <DeletePost />
+                        <CustomSubmitBtn 
+                            loadingText={<p className='bg-red-100 text-red-600 rounded p-3'>Deleting...</p>} 
+                            text={<p className="text-orange-400 text-lg">Delete</p>}
+                        />
                         </form>
                         <Link href={pathName}>
                             <button type="button" className="bg-red-500 text-white p-2">
-                                Close Modal
+                                Cancel
                             </button>
                         </Link>
                     </div>

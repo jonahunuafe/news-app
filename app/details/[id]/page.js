@@ -1,9 +1,5 @@
 import React from 'react'
 import { getSpecificNews } from '@/lib/data';
-// import { deleteNews } from '@/lib/action';
-// import CustomSubmitBtn from '@/components/CustomSubmitBtn';
-// import {FiTrash} from "react-icons/fi";
-// import DeletePost from '@components/DeletePost';
 import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/server';
 import Link from "next/link";
 import Modal from '@components/Modal';
@@ -28,14 +24,8 @@ const DetailsPage = async ({ params }) => {
       }}></p>
       <h4 className="text-right text-white pt-4 mb-2">Source: {specificNews.creator}</h4>
       <div className="flex justify-between">
-        {/* <form
-          action={deleteNews}
-        >
-          <input hidden name='id' defaultValue={specificNews.id} />
-          <DeletePost />
-        </form> */}
         <Link href="?modal=true">
-          <button type="button" className="bg-blue-500 text-white p-2">Open Modal</button>
+          <button type="button" className="bg-blue-500 text-white p-2">Delete Post</button>
         </Link>
         <span className="text-right block text-white">
           Email: {specificNews.email}
