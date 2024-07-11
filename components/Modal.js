@@ -1,9 +1,7 @@
 "use client"
 
-import React from 'react';
 import { deleteNews } from '@lib/action';
 import { useSearchParams, usePathname } from 'next/navigation';
-// import DeletePost from './DeletePost';
 import CustomSubmitBtn from '@/components/CustomSubmitBtn';
 import Link from "next/link";
 
@@ -11,7 +9,7 @@ const Modal = ({ id }) => {
   const searchParams = useSearchParams();
   const modal = searchParams.get("modal");
   const pathName = usePathname();
-  
+
   return (
     <>
         { modal && 

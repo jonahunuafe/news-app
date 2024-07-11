@@ -1,15 +1,12 @@
 import React from 'react'
+import {FiTrash} from "react-icons/fi";
 import { getSpecificNews } from '@/lib/data';
 import Link from "next/link";
 import Modal from '@components/Modal';
-import {FiTrash} from "react-icons/fi";
+
 
 
 const DetailsPage = async ({ params }) => {
-
-  
-
-
 
   const { id } = params;
   const specificNews = await getSpecificNews(id)
@@ -26,11 +23,9 @@ const DetailsPage = async ({ params }) => {
       }}></p>
       <h4 className="text-right text-white pt-4 mb-2">Source: {specificNews.creator}</h4>
       <div className="flex justify-between">
-        { 
-          <Link href="?modal=true">
-            <FiTrash className="text-orange-400 text-lg" />
-          </Link> 
-        }
+        <Link href="?modal=true">
+          <FiTrash className="text-orange-400 text-lg" />
+        </Link>
         <span className="text-right block text-white">
           Email: {specificNews.email}
         </span>
@@ -38,7 +33,7 @@ const DetailsPage = async ({ params }) => {
       <span className="text-green-400 font-medium text-right block mt-3">
         Posted on: {specificNews.createdAt.toLocaleString()}
       </span>
-      <Link href="/" className="text-center font-medium mt-7 text-green-400 border-lime-500 border-2 w-[max-content] mx-auto px-4 py-2 rounded-full -z-20">
+      <Link href="/" className="text-center font-medium mt-7 text-green-400 border-lime-500 border-2 w-[max-content] mx-auto px-4 py-2 rounded-full">
         Back to Home Page
       </Link>
       <div className='h-1 w-[70%] md:w-[100%] mx-auto bg-orange-400 rounded my-10'></div>
