@@ -4,11 +4,13 @@ import { getSpecificNews } from '@/lib/data';
 // import CustomSubmitBtn from '@/components/CustomSubmitBtn';
 // import {FiTrash} from "react-icons/fi";
 // import DeletePost from '@components/DeletePost';
+import { getKindeServerSession } from '@kinde-oss/kinde-auth-nextjs/dist/types/server';
 import Link from "next/link";
 import Modal from '@components/Modal';
 
 
 const DetailsPage = async ({ params }) => {
+  const { getPermissions } = getKindeServerSession();
   const { id } = params;
   const specificNews = await getSpecificNews(id)
 
@@ -45,7 +47,7 @@ const DetailsPage = async ({ params }) => {
       </Link>
       <div className='h-1 w-[70%] md:w-[100%] mx-auto bg-orange-400 rounded my-10'></div>
     </div>
-    <Modal />
+    <Modal id={specificNews.id} />
     </>
   )
 }
