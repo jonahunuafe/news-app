@@ -53,7 +53,6 @@ const HomePage  = async () => {
                   <Link href={`/details/${news.id}`} className="text-orange-400 font-medium">View Details</Link>
                 </div>
                 {/* <ImagePicker label='Your image' name='image' /> */}
-                <Link href="/delete">Delete</Link>
               </Card>
             ))
           }
