@@ -1,6 +1,7 @@
 import React from 'react'
 import Heading from '@/components/Heading'
 import CreateForm from '@/components/CreateForm'
+import {LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 
 const CreatePage = async () => {
@@ -20,7 +21,15 @@ const CreatePage = async () => {
         </div>
       </section>
     ) : (
-      <div>Access Denied</div>
+      <div className='flex flex-col justify-center items-center h-[90vh]'>
+        <p className='text-white pb-3'>
+          Do You Want To Post News?
+        </p>
+        <div className='h-1 w-[30%] md:w-[10%] bg-emerald-400 rounded mx-auto'></div>
+        <LoginLink className='text-white bg-emerald-500 py-1 px-3 rounded mt-8 cursor-pointer hover:bg-emerald-400'>
+          Login
+        </LoginLink>
+      </div>
     )
   }
   </>

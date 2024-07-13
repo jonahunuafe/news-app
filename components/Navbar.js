@@ -4,11 +4,6 @@ import {FiPlusCircle, FiHome} from "react-icons/fi";
 import {RegisterLink, LoginLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
 import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
 
-const {getUser} = getKindeServerSession();
-const user = await getUser();
-
-console.log(user);
-
 
 const Navbar = async () => {
 
