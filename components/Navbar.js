@@ -1,8 +1,20 @@
 import React from 'react'
 import Link from 'next/link'
-import {FiPlusCircle, FiHome} from "react-icons/fi"
+import {FiPlusCircle, FiHome} from "react-icons/fi";
+import {RegisterLink, LoginLink, LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
+import {getKindeServerSession} from "@kinde-oss/kinde-auth-nextjs/server";
+
+const {getUser} = getKindeServerSession();
+const user = await getUser();
+
+console.log(user);
+
 
 const Navbar = async () => {
+
+  const {getUser} = getKindeServerSession();
+  const user = await getUser();
+
   return (
     <nav className='flex flex-col md:flex-row justify-between items-center bg-zinc-800 px-8 py-6'>
       <Link href={'/'} className='text-white font-bold text-base md:text-lg font-serif border-b-2 md:border-b-0 pb-1 md:pb-0'>The News Room</Link>
@@ -21,14 +33,18 @@ const Navbar = async () => {
             <FiPlusCircle /> <span>Create</span>
           </Link>
         </div>
-        <div className='flex justify-between w-full md:w-[90%] lg:w-60'>
-          <p className='text-white font-medium cursor-pointer'>
-            Login in
-          </p>
-          <p className='text-white font-medium cursor-pointer'>
-            Register
-          </p>
-        </div>
+        { !user ? (
+          <div className='flex justify-between w-full md:w-[90%] lg:w-60'>
+            <LoginLink postLoginRedirectURL="/" className='text-white font-medium cursor-pointer'>Log in</LoginLink>
+            <RegisterLink postLoginRedirectURL="/" className='text-white font-medium cursor-pointer'>Register</RegisterLink>
+          </div>
+          ) : (
+            <div className='flex justify-between w-full md:w-[90%] lg:w-[45%]'>
+              <p className='text-white font-medium'>Logged in as <span className='text-orange-300'>{user.given_name}</span></p>
+              <LogoutLink postLoginRedirectURL="/" className='text-white font-medium cursor-pointer'>Log out</LogoutLink>
+            </div>
+          )
+        }
       </div>
     </nav>
   )
