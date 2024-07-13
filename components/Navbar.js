@@ -35,13 +35,13 @@ const Navbar = async () => {
         </div>
         { !user ? (
           <div className='flex justify-between w-full md:w-[90%] lg:w-60'>
-            <LoginLink postLoginRedirectURL="/" className='text-white font-medium cursor-pointer'>Log in</LoginLink>
-            <RegisterLink postLoginRedirectURL="/" className='text-white font-medium cursor-pointer'>Register</RegisterLink>
+            <LoginLink className='text-white font-medium cursor-pointer'>Log in</LoginLink>
+            <RegisterLink className='text-white font-medium cursor-pointer'>Register</RegisterLink>
           </div>
           ) : (
             <div className='flex justify-between w-full md:w-[90%] lg:w-[45%]'>
               <p className='text-white font-medium'>Logged in as <span className='text-orange-300'>{user.given_name}</span></p>
-              <LogoutLink postLoginRedirectURL="/" className='text-white font-medium cursor-pointer'>Log out</LogoutLink>
+              <LogoutLink className='text-white font-medium cursor-pointer'>Log out</LogoutLink>
             </div>
           )
         }
