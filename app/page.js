@@ -44,8 +44,8 @@ const HomePage  = async () => {
                 <p 
                   className="text-gray-700 text-lg"
                   dangerouslySetInnerHTML={{
-                  __html: news.description.replace(/\n/g, '<br />'),
-                }}></p>
+                    __html: news.description.replace(/\n/g, '<br />'),
+                  }}></p>
                 <div className="flex justify-between px-4 py-6">
                   <Link href={`editnews/${news.id}`}>
                     <FiEdit />
@@ -56,6 +56,9 @@ const HomePage  = async () => {
               </Card>
             ))
           }
+          {/* <Link href={"/delete"} className="text-orange-400 font-medium">
+            Delete
+          </Link> */}
         </div>
       </main>
     </>
