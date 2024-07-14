@@ -56,9 +56,6 @@ const HomePage  = async () => {
               </Card>
             ))
           }
-          {/* <Link href={"/delete"} className="text-orange-400 font-medium">
-            Delete
-          </Link> */}
         </div>
       </main>
     </>
