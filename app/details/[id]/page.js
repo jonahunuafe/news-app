@@ -2,12 +2,11 @@ import React from 'react'
 import {FiTrash} from "react-icons/fi";
 import { getSpecificNews } from '@/lib/data';
 import Link from "next/link";
-import Modal from '@components/Modal';
+// import Modal from '@components/Modal';
 
 
 
 const DetailsPage = async ({ params }) => {
-
   const { id } = params;
   const specificNews = await getSpecificNews(id)
 
@@ -22,14 +21,14 @@ const DetailsPage = async ({ params }) => {
         __html: specificNews.description.replace(/\n/g, '<br />'),
       }}></p>
       <h4 className="text-right text-white pt-4 mb-2">Source: {specificNews.creator}</h4>
-      <div className="flex justify-between">
+      <span className="text-right text-white">
+        Email: {specificNews.email}
+      </span>
+      {/* <div className="flex justify-between">
         <Link href="?modal=true">
           <FiTrash className="text-orange-400 text-lg" />
         </Link>
-        <span className="text-right block text-white">
-          Email: {specificNews.email}
-        </span>
-      </div>
+      </div> */}
       <span className="text-green-400 font-medium text-right block mt-3">
         Posted on: {specificNews.createdAt.toLocaleString()}
       </span>
@@ -38,7 +37,7 @@ const DetailsPage = async ({ params }) => {
       </Link>
       <div className='h-1 w-[70%] md:w-[100%] mx-auto bg-orange-400 rounded my-10'></div>
     </div>
-    <Modal id={specificNews.id} />
+    {/* <Modal id={specificNews.id} /> */}
     </>
   )
 }

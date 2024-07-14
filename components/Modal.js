@@ -1,9 +1,9 @@
 "use client"
-
 import { deleteNews } from '@lib/action';
 import { useSearchParams, usePathname } from 'next/navigation';
 import CustomSubmitBtn from '@/components/CustomSubmitBtn';
 import Link from "next/link";
+
 
 const Modal = ({ id }) => {
   const searchParams = useSearchParams();
@@ -36,7 +36,7 @@ const Modal = ({ id }) => {
                     </div>
                 </div>
             </dialog>
-        }
+        }  
     </>
   )
 }
