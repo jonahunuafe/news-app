@@ -47,4 +47,6 @@ Welcome to the news room. This is a great app that lets the world know about the
 
     - Only registered users can log in and create a post.
 
+## Design
 
+The design for this project was born out of imagination and experience.
