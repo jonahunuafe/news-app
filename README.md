@@ -37,7 +37,8 @@ Welcome to the news room. This is a great app that lets the world know about the
 #### News Details
 
     - View full details of a specific news upon clicking view details.
-    - Details include additional information such as: source, email of user, the date and time a news was posted which comes from the database.
+    - Details include additional information such as: source, email of user, 
+    the date and time a news was posted which comes from the database.
 
 #### Log in
 
@@ -59,3 +60,9 @@ The design for this project was born out of imagination and experience.
     - JavaScript
     - React 
     - Nextjs
+    - MongoDB Database
+
+## Tool Kit
+<div align="center">  
+<img alt='npm' src="https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white"> &nbsp;&nbsp;<img alt='vscode' src="https://img.shields.io/badge/VS%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"> &nbsp;&nbsp;<img alt='git' src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"> &nbsp;&nbsp;<img alt='github' src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white"> &nbsp;&nbsp;
+</div>
