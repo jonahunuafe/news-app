@@ -22,3 +22,29 @@ Welcome to the news room. This is a great app that lets the world know about the
 
 ![Create-News](./public/create-news.png)
 
+## Functionality
+
+#### General:
+    - View news.
+
+#### Create News
+    - Add News by clicking create, only when a user is authenticated.
+
+#### Edit News
+
+    - Users can edit news and make updates.
+
+#### News Details
+
+    - View full details of a specific news upon clicking view details.
+    - Details include additional information such as: source, email of user, the date and time a news was posted which comes from the database.
+
+#### Log in
+
+    - Users must be logged in before creating a post.
+
+#### Register
+
+    - Only registered users can log in and create a post.
+
+
