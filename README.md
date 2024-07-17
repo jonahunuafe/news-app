@@ -37,8 +37,8 @@ Welcome to the news room. This is a great app that lets the world know about the
 #### News Details
 
     - View full details of a specific news upon clicking view details.
-    - Details include additional information such as: source, email of user, 
-    the date and time a news was posted which comes from the database.
+    - Details include additional information such as: source, email of user, the date and time 
+    a news was posted which comes from the database.
 
 #### Log in
 
@@ -54,13 +54,13 @@ The design for this project was born out of imagination and experience.
 
 ## Tech Stack
 
-    - HTML
-    - CSS
-    - Tailwindcss
-    - JavaScript
-    - React 
-    - Nextjs
-    - MongoDB Database
+    - [HTML]
+    - [CSS]
+    - [Tailwindcss]
+    - [JavaScript]
+    - [React]
+    - [Nextjs]
+    - [MongoDB Database]
 
 ## Tool Kit
 <div align="center">  
