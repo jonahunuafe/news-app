@@ -54,5 +54,5 @@ The design for this project was born out of imagination and experience.
 ## Tech Stack
 
 <div align="center">
-<img alt='react' src="https://img.shields.io/badge/react-0D6D8C?style=for-the-badge&logo=react&logoColor=white"/> &nbsp;&nbsp;<img alt='tailwindcss' src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg"/> &nbsp;&nbsp;
+<img alt='react' src="https://img.shields.io/badge/react-0D6D8C?style=for-the-badge&logo=react&logoColor=white"/> &nbsp;&nbsp;<img alt='tailwindcss' src="https://tailwindcss.com/_next/static/media/tailwindcss-mark.3c5441fc7a190fb1800d4a5c7f07ba4b1345a9c8.svg" width='10%'/> &nbsp;&nbsp;
 </div>
