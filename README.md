@@ -5,3 +5,12 @@ Welcome to the news room. This is a great app that lets the world know about the
 ## Table of Contents
 
 
+- [Overview](#overview)
+
+- [Features](#features)
+
+- [Design](#design)
+
+- [Tech Stack](#tech-stack)
+
+- [Tool Kit](#tool-kit)
