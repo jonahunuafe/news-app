@@ -16,9 +16,9 @@ Welcome to the news room. This is a great app that lets the world know about the
 - [Tool Kit](#tool-kit)
 
 ## Overview
-![Home-Page]()
+![Home-Page](./public/news-homepage.png)
 
-![News-Details]()
+![News-Details](./public/news-detailspage.png)
 
-![Create-News]()
+![Create-News](./public/create-news.png)
 
