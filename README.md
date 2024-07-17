@@ -54,13 +54,13 @@ The design for this project was born out of imagination and experience.
 
 ## Tech Stack
 
-    - [HTML]
-    - [CSS]
-    - [Tailwindcss]
-    - [JavaScript]
-    - [React]
-    - [Nextjs]
-    - [MongoDB Database]
+    * HTML
+    * CSS
+    * Tailwindcss
+    * JavaScript
+    * React
+    * Nextjs
+    * MongoDB Database
 
 ## Tool Kit
 <div align="center">  
