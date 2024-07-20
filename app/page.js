@@ -7,7 +7,7 @@ import {FiEdit} from "react-icons/fi";
 import { getAllNews } from "@/lib/data";
 // import ImagePicker from "@/components/ImagePicker";
 import Card from "./ui/Card";
-// import Photos from "@components/Photos";
+import Photos from "@components/Photos";
 
 
 const HomePage  = async () => {
@@ -47,7 +47,7 @@ const HomePage  = async () => {
                   dangerouslySetInnerHTML={{
                     __html: news.description.replace(/\n/g, '<br />'),
                   }}></p>
-                  {/* <Photos /> */}
+                  <Photos />
                 <div className="flex justify-between px-4 py-6">
                   <Link href={`editnews/${news.id}`}>
                     <FiEdit />
