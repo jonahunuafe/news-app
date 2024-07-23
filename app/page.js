@@ -5,7 +5,7 @@ import Heading from "@/components/Heading";
 import Link from "next/link";
 import {FiEdit} from "react-icons/fi";
 import { getAllNews } from "@/lib/data";
-// import ImagePicker from "@/components/ImagePicker";
+import ImagePicker from "@/components/ImagePicker";
 import Card from "./ui/Card";
 
 
@@ -54,7 +54,7 @@ const HomePage  = async () => {
                   </Link>
                   <Link href={`/details/${news.id}`} className="text-orange-400 font-medium">View Details</Link>
                 </div>
-                {/* <ImagePicker label='Your image' name='image' /> */}
+                <ImagePicker label='Your image' name='image' />
               </Card>
             ))
           }

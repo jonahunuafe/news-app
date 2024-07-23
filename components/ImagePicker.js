@@ -13,8 +13,8 @@ export default function ImagePicker({ label, name }) {
         imageInputRef.current.click();
     }
 
-    function handleImageChange(event) {
-         /* All the files that are picked, but we need only the first file i.e [0] */
+   async  function handleImageChange(event) {
+        /* All the files that are picked, but we need only the first file i.e [0] */
         const file = event.target.files[0]    
         
         /* if the user doesn't pick a file */
@@ -24,15 +24,8 @@ export default function ImagePicker({ label, name }) {
         }
 
         /* To show the file that has been chosen as a preview it needs to be converted to DataURL using the FileReader Object */
-        const fileReader = new FileReader();  
 
-        fileReader.onload = () => {
-            setPickedImage(fileReader.result);
-        }
-
-        fileReader.readAsDataURL(file);
     }
-
 
     return (
         <div className={classes.picker}>
